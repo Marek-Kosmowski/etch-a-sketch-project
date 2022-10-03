@@ -17,5 +17,13 @@ main {
 .square {
   width: 2rem;
   height: 2rem;
-  border: 1px solid black;
+  border: 1px solid rgb(38, 14, 146);
+}
+
+/* .square:hover {
+  background-color: black;
+} */
+
+.fill {
+  background-color: black;
 }
