@@ -27,3 +27,10 @@ main {
 .fill {
   background-color: black;
 }
+
+.remove {
+  margin-top: 2rem;
+  padding: 5px 15px;
+  background-color: cadetblue;
+  cursor: pointer;
+}

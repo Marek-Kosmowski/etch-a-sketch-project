@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const removeBgBtn = document.querySelector('.remove');
 
 
 
@@ -12,15 +13,25 @@ function createGrid() {
 }
 
 function paint() {
-    const paintSquare = document.querySelectorAll('.square')
+    const paintSquare = document.querySelectorAll('.square');
     paintSquare.forEach(el => {
         el.addEventListener('mouseover', () => {
-            el.classList.add('fill')
+            el.classList.add('fill');
         })
     })
 }
 
+function removeBg() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(el => {
+        el.classList.remove('fill')
+    })
+
+}
+
+
+
 // addEventListener('mouseover', paint)
 addEventListener('mouseover', paint);
-
+// addEventListener('click', listener)
 createGrid();
