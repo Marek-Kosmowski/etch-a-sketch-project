@@ -30,7 +30,7 @@ function removeBg() {
 }
 
 
-
+removeBgBtn.addEventListener('click', removeBg);
 // addEventListener('mouseover', paint)
 addEventListener('mouseover', paint);
 // addEventListener('click', listener)
