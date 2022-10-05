@@ -11,10 +11,9 @@ main {
 }
 
 .containerSmall {
-  margin-top: 4rem;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+  grid-template-columns: repeat(auto-fill, 40px);
 }
 
 .containerMed {
@@ -22,17 +21,24 @@ main {
   margin-top: 4rem;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 25px);
+  grid-template-columns: repeat(auto-fill, 20px);
 }
-.containerBig {
+.containerLarge {
   overflow: hidden;
   margin-top: 4rem;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 12.5px);
+  grid-template-columns: repeat(60, 1fr);
+}
+.containerExtraLarge {
+  overflow: hidden;
+  margin-top: 4rem;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10px);
 }
 
-.containerHuge {
+.containerSuperLarge {
   overflow: hidden;
   margin-top: 4rem;
   border: 1px solid black;
@@ -41,8 +47,7 @@ main {
 }
 
 .square {
-  /* width: 2rem;
-  height: 2rem; */
+
   border: 1px solid rgb(38, 14, 146);
 }
 
@@ -55,7 +60,7 @@ main {
 }
 
 .remove {
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 5px 15px;
   background-color: cadetblue;
   cursor: pointer;

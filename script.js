@@ -5,7 +5,7 @@ const removeBgBtn = document.querySelector('.remove');
 
 function createGridSmall() {
     container.classList.add('containerSmall');
-    for (let i = 0; i < 256; i++) {
+    for (let i = 0; i < 400; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         container.appendChild(square);
@@ -15,7 +15,7 @@ function createGridSmall() {
 
 function createGridMedium() {
     container.classList.add('containerMed');
-    for (let i = 0; i < 1024; i++) {
+    for (let i = 0; i < 1600; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         container.appendChild(square);
@@ -23,17 +23,27 @@ function createGridMedium() {
 }
 
 
-function createGridBig() {
-    container.classList.add('containerBig');
-    for (let i = 0; i < 4096; i++) {
+function createGridLarge() {
+    container.classList.add('containerLarge');
+    for (let i = 0; i < 3600; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         container.appendChild(square);
     }
 }
 
-function createGridHuge() {
-    container.classList.add('containerHuge');
+
+function createGridExtraLarge() {
+    container.classList.add('containerExtraLarge');
+    for (let i = 0; i < 6400; i++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        container.appendChild(square);
+    }
+}
+
+function createGridSuperLarge() {
+    container.classList.add('containerSuperLarge');
     for (let i = 0; i < 10000; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -63,5 +73,6 @@ removeBgBtn.addEventListener('click', removeBg);
 addEventListener('mouseover', paint);
 // createGridSmall();
 // createGridMedium();
-createGridBig();
-// createGridHuge();
+createGridLarge();
+// createGridExtraLarge();
+// createGridSuperLarge();
