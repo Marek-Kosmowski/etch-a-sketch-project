@@ -1,25 +1,64 @@
 main {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .container {
+  width: 50rem;
+  height: 50rem;
+}
+
+.containerSmall {
   margin-top: 4rem;
-  width: 34rem;
-  height: 34rem;
   border: 1px solid black;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  grid-template-columns: repeat(auto-fill, 50px);
+}
+
+.containerMed {
+  overflow: hidden;
+  margin-top: 4rem;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25px);
+}
+.containerBig {
+  overflow: hidden;
+  margin-top: 4rem;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12.5px);
+}
+
+.containerHuge {
+  overflow: hidden;
+  margin-top: 4rem;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8px);
 }
 
 .square {
-  width: 2rem;
-  height: 2rem;
+  /* width: 2rem;
+  height: 2rem; */
   border: 1px solid rgb(38, 14, 146);
 }
 
+.squareMed {
+  /* width: 17px;
+  height: 17px; */
+  border: 1px solid rgb(38, 14, 146);
+}
+
+.squareBig {
+  border: 1px solid rgb(38, 14, 146);
+}
+
+.squareHuge {
+  border: 1px solid rgb(38, 14, 146);
+}
 /* .square:hover {
   background-color: black;
 } */
@@ -29,7 +68,7 @@ main {
 }
 
 .remove {
-  margin-top: 2rem;
+  margin-top: 4rem;
   padding: 5px 15px;
   background-color: cadetblue;
   cursor: pointer;

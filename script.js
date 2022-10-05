@@ -3,13 +3,42 @@ const removeBgBtn = document.querySelector('.remove');
 
 
 
-function createGrid() {
+function createGridSmall() {
+    container.classList.add('containerSmall');
     for (let i = 0; i < 256; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
         container.appendChild(square);
     }
 
+}
+
+function createGridMedium() {
+    container.classList.add('containerMed');
+    for (let i = 0; i < 1024; i++) {
+        const square = document.createElement('div');
+        square.classList.add('squareMed');
+        container.appendChild(square);
+    }
+}
+
+
+function createGridBig() {
+    container.classList.add('containerBig');
+    for (let i = 0; i < 4096; i++) {
+        const square = document.createElement('div');
+        square.classList.add('squareBig');
+        container.appendChild(square);
+    }
+}
+
+function createGridHuge() {
+    container.classList.add('containerHuge');
+    for (let i = 0; i < 10000; i++) {
+        const square = document.createElement('div');
+        square.classList.add('squareHuge');
+        container.appendChild(square);
+    }
 }
 
 function paint() {
@@ -31,7 +60,8 @@ function removeBg() {
 
 
 removeBgBtn.addEventListener('click', removeBg);
-// addEventListener('mouseover', paint)
 addEventListener('mouseover', paint);
-// addEventListener('click', listener)
-createGrid();
+// createGridSmall();
+// createGridMedium();
+createGridBig();
+// createGridHuge();
