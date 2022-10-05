@@ -46,22 +46,9 @@ main {
   border: 1px solid rgb(38, 14, 146);
 }
 
-.squareMed {
-  /* width: 17px;
-  height: 17px; */
-  border: 1px solid rgb(38, 14, 146);
-}
-
-.squareBig {
-  border: 1px solid rgb(38, 14, 146);
-}
-
-.squareHuge {
-  border: 1px solid rgb(38, 14, 146);
-}
-/* .square:hover {
+.square:hover {
   background-color: black;
-} */
+}
 
 .fill {
   background-color: black;
