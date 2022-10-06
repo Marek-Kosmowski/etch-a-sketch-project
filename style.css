@@ -10,15 +10,21 @@ main {
   height: 50rem;
 }
 
+.clearGrid {
+  width: 50rem;
+  height: 50rem;
+}
+
 .containerSmall {
+  margin-top: 4rem;
   border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(auto-fill, 40px);
 }
 
 .containerMed {
-  overflow: hidden;
   margin-top: 4rem;
+  overflow: hidden;
   border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(auto-fill, 20px);
@@ -47,7 +53,6 @@ main {
 }
 
 .square {
-
   border: 1px solid rgb(38, 14, 146);
 }
 

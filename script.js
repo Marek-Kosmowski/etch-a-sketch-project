@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const removeBgBtn = document.querySelector('.remove');
+const confirmBtn = document.querySelector('.confirm');
 
 
 
@@ -62,17 +63,46 @@ function paint() {
 
 function removeBg() {
     const squares = document.querySelectorAll('.square');
-    squares.forEach(el => {
-        el.classList.remove('fill')
+    squares.forEach(square => {
+        square.classList.remove('fill');
     })
 
 }
 
+function removeSquares() {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
+}
 
 removeBgBtn.addEventListener('click', removeBg);
 addEventListener('mouseover', paint);
-// createGridSmall();
-// createGridMedium();
-createGridLarge();
-// createGridExtraLarge();
-// createGridSuperLarge();
+
+
+const gridSlider = document.querySelector('.gridSlider');
+const rangeValue = document.querySelector('.rangeValue');
+
+gridSlider.addEventListener('change', () => {
+    rangeValue.innerHTML = gridSlider.value;
+
+})
+
+confirmBtn.addEventListener('click', () => {
+    removeSquares();
+    container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
+
+    if (gridSlider.value === '20') {
+        createGridSmall();
+    } else if (gridSlider.value === '40') {
+        createGridMedium();
+    } else if (gridSlider.value === '60') {
+        createGridLarge();
+    } else if (gridSlider.value === '80') {
+        createGridExtraLarge();
+    } else if (gridSlider.value === '100') {
+        createGridSuperLarge();
+    } else {
+        alert('Something went wrong, try refreshing!')
+    }
+})
