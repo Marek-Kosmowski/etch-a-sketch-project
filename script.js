@@ -1,7 +1,8 @@
 const container = document.querySelector('.container');
 const removeBgBtn = document.querySelector('.remove');
 const confirmBtn = document.querySelector('.confirm');
-
+const gridSlider = document.querySelector('.gridSlider');
+const rangeValue = document.querySelector('.rangeValue');
 
 
 function createGridSmall() {
@@ -60,7 +61,7 @@ function paint() {
         })
     })
 }
-
+//function that removes background color of squares
 function removeBg() {
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
@@ -68,7 +69,7 @@ function removeBg() {
     })
 
 }
-
+//function that removes squares and classes from a parent(which is a container)
 function removeSquares() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -76,19 +77,13 @@ function removeSquares() {
     container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
 }
 
-removeBgBtn.addEventListener('click', removeBg);
-addEventListener('mouseover', paint);
-
-
-const gridSlider = document.querySelector('.gridSlider');
-const rangeValue = document.querySelector('.rangeValue');
-
-gridSlider.addEventListener('change', () => {
+removeBgBtn.addEventListener('click', removeBg);//removes color
+addEventListener('mouseover', paint);//adds class fill to squares for background 
+gridSlider.addEventListener('change', () => { //updates span with input.value
     rangeValue.innerHTML = gridSlider.value;
-
 })
 
-confirmBtn.addEventListener('click', () => {
+confirmBtn.addEventListener('click', () => { 
     removeSquares();
     container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
 
