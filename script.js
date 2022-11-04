@@ -54,12 +54,25 @@ function createGridSuperLarge() {
         container.appendChild(square);
     }
 }
+//random number 0-255 for color
+function getRandomInt() {
+    return Math.floor(Math.random() * 255);
+}
+//
+function setRandomColor() {
+    const paintSquares = document.querySelectorAll('.square');
+    paintSquares.forEach(el => {
+        el.addEventListener('mouseover', () => {
+            el.style.background = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`;
+        })
+    })
+}
 
 function paintBlack() {
     const paintSquare = document.querySelectorAll('.square');
     paintSquare.forEach(el => {
         el.addEventListener('mouseover', () => {
-            el.classList.add('fill');
+            el.style.background = 'black';
         })
     })
 }
@@ -69,6 +82,7 @@ function removeBg() {
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
         square.classList.remove('fill');
+        square.removeAttribute('style');
     })
 
 }
@@ -84,7 +98,6 @@ removeBgBtn.addEventListener('click', removeBg); //removes color
 gridSlider.addEventListener('change', () => { //updates span with input.value
     rangeValue.innerHTML = gridSlider.value;
 })
-
 confirmBtn.addEventListener('click', () => {
     removeSquares();
     container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
@@ -105,3 +118,4 @@ confirmBtn.addEventListener('click', () => {
 })
 
 blackBtn.addEventListener('click', paintBlack);
+randomBtn.addEventListener('click', setRandomColor);
