@@ -3,6 +3,8 @@ const removeBgBtn = document.querySelector('.remove');
 const confirmBtn = document.querySelector('.confirm');
 const gridSlider = document.querySelector('.gridSlider');
 const rangeValue = document.querySelector('.rangeValue');
+const blackBtn = document.querySelector('.black');
+const randomBtn = document.querySelector('.random');
 
 
 function createGridSmall() {
@@ -53,7 +55,7 @@ function createGridSuperLarge() {
     }
 }
 
-function paint() {
+function paintBlack() {
     const paintSquare = document.querySelectorAll('.square');
     paintSquare.forEach(el => {
         el.addEventListener('mouseover', () => {
@@ -61,6 +63,7 @@ function paint() {
         })
     })
 }
+
 //function that removes background color of squares
 function removeBg() {
     const squares = document.querySelectorAll('.square');
@@ -77,13 +80,12 @@ function removeSquares() {
     container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
 }
 
-removeBgBtn.addEventListener('click', removeBg);//removes color
-addEventListener('mouseover', paint);//adds class fill to squares for background 
+removeBgBtn.addEventListener('click', removeBg); //removes color
 gridSlider.addEventListener('change', () => { //updates span with input.value
     rangeValue.innerHTML = gridSlider.value;
 })
 
-confirmBtn.addEventListener('click', () => { 
+confirmBtn.addEventListener('click', () => {
     removeSquares();
     container.classList.remove('containerMed', 'containerSmall', 'containerLarge', 'containerExtraLarge', 'containerSuperLarge');
 
@@ -101,3 +103,5 @@ confirmBtn.addEventListener('click', () => {
         alert('Something went wrong, try refreshing!')
     }
 })
+
+blackBtn.addEventListener('click', paintBlack);
