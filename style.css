@@ -67,7 +67,6 @@ main {
   background-color: black;
 } */
 
-
 .remove,
 .black,
 .random {
@@ -78,8 +77,11 @@ main {
 }
 
 .black:focus {
-  background-color: red;
+  background-color: #404258;
+  color: #EEEEEE;
 }
-.random:focus{
-  background-color: blue;
+
+.random:focus {
+  background-color: #404258;
+  color: #EEEEEE;
 }
